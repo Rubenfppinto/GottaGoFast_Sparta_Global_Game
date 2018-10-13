@@ -1,0 +1,25 @@
+/* Target selector */
+body {
+  background-color: lightgrey;
+}
+
+header {
+  border-bottom: 2px solid grey;
+  text-align: center;
+}
+
+
+footer {
+  position: fixed ;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ID Selectors */
+
+/* Class selectors */
+.border {
+  border: solid 2px red;
+  height: 100%;
+}
