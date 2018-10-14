@@ -36,5 +36,5 @@ footer {
   border: solid 2px green;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-self: center;
 }
