@@ -21,12 +21,20 @@ footer {
 }
 
 /* ID Selectors */
+#aligntext {
+  text-align: left;
+}
 
 /* Class selectors */
 .maincontainer {
   border: solid 2px red;
   height: 100vh;
   text-align: center;
-  display: ;
+}
 
+.menu {
+  border: solid 2px green;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
