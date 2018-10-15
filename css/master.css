@@ -3,6 +3,10 @@ body {
   background-color: lightgrey;
 }
 
+h4 {
+  font-weight: bold;
+}
+
 header {
   border-bottom: 1.5px solid black;
   text-align: center;
@@ -31,6 +35,13 @@ img {
 }
 
 /* Class selectors */
+
+.bodybg {
+  background-image: url("pics/bg.jpg");
+  background-size: cover;
+
+}
+
 .maincontainer {
   display: flex;
   align-items: center;
@@ -49,23 +60,39 @@ img {
 
 /* Game page specific styles */
 .maingamestyle {
-  border: solid 2px red;
-  height: 100vh;
+  /* border: solid 2px red; */
+  height: 80vh;
+  width: 100%;
 }
 
 #timescore {
-  border: solid green 2px;
+  /* border: solid green 2px; */
+  padding-top: 10px;
+  width: 60%;
+  margin: auto;
+  max-width: 60%;
+  border-bottom: black solid 1px;
 }
 
 #gamearea {
-  border: solid black 2px;
+  /* border: solid black 2px; */
   text-align: center;
   flex-direction: column;
   height: 85%;
-  display: flex;
-  justify-content: center;
+
 }
 
 #objmoving {
-  border: solid orange 2px;
+  /* border: solid orange 2px; */
+  padding-top: 40px;
+}
+
+#userinput {
+
+  width: 20%;
+  border-radius: 5px;
+  border: solid 2px #91C7B1;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
 }
