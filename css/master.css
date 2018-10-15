@@ -36,11 +36,11 @@ img {
 
 /* Class selectors */
 
-.bodybg {
+/* .bodybg {
   background-image: url("pics/bg.jpg");
   background-size: cover;
 
-}
+} */
 
 .maincontainer {
   display: flex;
