@@ -9,12 +9,58 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "advantage",
     "culture",
     "integrated",
-    "falsify"
-  ]
+    "falsify",
+    "racism",
+    "discover",
+    "photograph",
+    "credibility",
+    "ceiling",
+    "infinite",
+    "credibility",
+    "retailer",
+    "bedroom",
+    "friend",
+    "suntan",
+    "job",
+    "chain",
+    "brainstorm",
+    "refer",
+    "feminist",
+    "quantity",
+    "brush",
+    "nominate",
+    "launch",
+    "strike",
+    "captivate",
+    "bike",
+    "activity",
+    "cell phone",
+    "outlook",
+    "serious",
+    "bald",
+    "anger",
+    "shop",
+    "well",
+    "hypothesis",
+    "argument",
+    "east",
+    "mystery",
+    "poison",
+    "tribe",
+    "evoke",
+    "glove",
+    "crime",
+    "bad",
+    "crack",
+    "descent",
+    "far",
+    "nationalist",
+    "arrogant",
+    "clinic",
+    "kinship"]
 
   var currentScore = document.getElementById('score').innerHTML = 0;
   var time = 0;
-
 
   // compareWords();
   // compareWords (event);
@@ -57,43 +103,20 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   })
 
-
-
+  // var date = new Date();
+  // var sec = date.getSeconds();
+  // var min = date.getMinutes();
+  var sec = 0;
+  var min = 0;
+  var timer = function() {
+    if (++sec === 60) {
+      sec = 0;
+      if (++min === 60) min = 0;
+    }
+    document.getElementById("timer").innerHTML = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
+  };
+  setInterval(timer, 1000);//runs the clock every second
+  timer();
 
 
   });
-
-
-
-
-
-
-    //var wordInput = document.getElementById('userinput').value;
-
-      // if (wordInput.length === randomWord[index].length){
-      //   console.log ("inside first if");
-      //   console.log (wordInput);
-      //   if (wordInput == randomWord[index] /*&& enterKey === 13*/){
-      //     console.log("Correct");
-      //     document.getElementById('outcome').innerHTML = "Correct!";
-      //     document.getElementById('outcome').style.color = "Green";
-      //     // document.getElementById('userinput').value = "";
-      //     console.log(randomWord[index].length);
-      //     console.log(wordInput.length);
-      //     console.log (wordInput);
-      //   }else if (/*enterKey === 13 &&*/ wordInput != randomWord[index])
-      //   {
-      //   document.getElementById('outcome').innerHTML = "Incorrect!";
-      //   document.getElementById('outcome').style.color = "Red";
-      //   // document.getElementById('userinput').value = "";
-      //   console.log(randomWord[index].length);
-      //   console.log(wordInput.length);
-      //   }else {
-      //     document.getElementById('outcome').innerHTML = "something else!";
-      //     console.log (wordInput);
-      //     console.log (randomWord[index]);
-      //     console.log(randomWord[index].length);
-      //     console.log(wordInput.length);
-      //   }
-      // }
-    //});
