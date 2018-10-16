@@ -29,50 +29,40 @@ document.addEventListener('DOMContentLoaded', function(event) {
     currentWord.innerHTML = randomWord[index];
     // console.log(randomWord[index].length)
   }
+
   generateWord(randomWord);
 
-  // function compareWords() {
-  //   if(userinput.value===randomWord[index]){
-  //     outcome.innerHTML = "Correct!";
-  //     return true;
-  //   } else{
-  //     outcome.innerHTML = "Incorrect!";
-  //     return false;
-  //   }
-  // }
 
-
-
+  //fecths the input box and adds an event listeners when a key is released
   document.getElementById("userinput").addEventListener("keyup", function(event){
+    //runs the event keycod so it can fetch any code for any key on the keyboard
     var key = event.keyCode;
     var wordInput = document.getElementById('userinput').value;
+    //matching if the key pressed is enter
     if (key===13){
     if (wordInput.length === randomWord[index].length && wordInput === randomWord[index])
-      {
-        console.log ("correct");
+      {//displays correct if words match
         document.getElementById('outcome').innerHTML = "Correct!";
         document.getElementById('outcome').style.color = "Green";
-      }else {
-
-      console.log ("Incorrect")
-      document.getElementById('outcome').innerHTML = "Incorrect!";
-      document.getElementById('outcome').style.color = "Red";
+        generateWord(randomWord);
+        document.getElementById('userinput').value = "";
+        document.getElementById('userinput').placeholder = "Type the word!"
+        document.getElementById('score').innerHTML = currentScore += 1;
+      }else{//displays incorrect if words don't match
+        document.getElementById('outcome').innerHTML = "Incorrect!";
+        document.getElementById('outcome').style.color = "Red";
+        document.getElementById('userinput').placeholder = "oops! Try again!"
+        document.getElementById('userinput').value = "";
       }
     }
-    //}
-
-
-    // if (key===13 /*&& wordInput.length === randomWord[index].length && wordInput === randomWord[index]*/){
-    //   console.log (key);
-    //   console.log("correct");
-    //   // if (wordInput.length === randomWord[index].length){
-    //   //   if (wordInput == randomWord[index]){
-    //   //     console.log("Correct!");
-    //   //   }
-    //   }
   })
+
+
+
+
+
   });
-// });
+
 
 
 
@@ -107,9 +97,3 @@ document.addEventListener('DOMContentLoaded', function(event) {
       //   }
       // }
     //});
-
-// console.log(randomWord[index].length);
-// console.log(wordInput.length);
-
-
-// });
