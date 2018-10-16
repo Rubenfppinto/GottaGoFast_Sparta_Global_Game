@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "nationalist",
     "arrogant",
     "clinic",
-    "kinship"]
+    "kinship"
+  ]
 
   var currentScore = document.getElementById('score').innerHTML = 0;
   var time = 0;
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   //Functions
   //Generates random word
   var index;
+
   function generateWord(randomWord) {
     //randomly generates an index
     index = Math.floor(Math.random() * randomWord.length);
@@ -80,21 +82,20 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
   //fecths the input box and adds an event listeners when a key is released
-  document.getElementById("userinput").addEventListener("keyup", function(event){
+  document.getElementById("userinput").addEventListener("keyup", function(event) {
     //runs the event keycod so it can fetch any code for any key on the keyboard
     var key = event.keyCode;
     var wordInput = document.getElementById('userinput').value;
     //matching if the key pressed is enter
-    if (key===13){
-    if (wordInput.length === randomWord[index].length && wordInput === randomWord[index])
-      {//displays correct if words match
+    if (key === 13) {
+      if (wordInput.length === randomWord[index].length && wordInput === randomWord[index]) { //displays correct if words match
         document.getElementById('outcome').innerHTML = "Correct!";
         document.getElementById('outcome').style.color = "Green";
         generateWord(randomWord);
         document.getElementById('userinput').value = "";
         document.getElementById('userinput').placeholder = "Type the word!"
         document.getElementById('score').innerHTML = currentScore += 1;
-      }else{//displays incorrect if words don't match
+      } else { //displays incorrect if words don't match
         document.getElementById('outcome').innerHTML = "Incorrect!";
         document.getElementById('outcome').style.color = "Red";
         document.getElementById('userinput').placeholder = "oops! Try again!"
@@ -115,8 +116,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
     document.getElementById("timer").innerHTML = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
   };
-  setInterval(timer, 1000);//runs the clock every second
+  setInterval(timer, 1000); //runs the clock every second
   timer();
 
 
-  });
+});

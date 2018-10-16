@@ -29,6 +29,21 @@ img {
   height: 60px;
 }
 
+button {
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+  color: black;
+  border-color: black;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
+
 /* ID Selectors */
 #aligntext {
   text-align: left;
@@ -45,13 +60,11 @@ img {
 .maincontainer {
   display: flex;
   align-items: center;
-  border: solid 2px red;
-  height: 100vh;
+  height: 75vh;
   text-align: center;
 }
 
 .menu {
-  border: solid 2px green;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -60,13 +73,11 @@ img {
 
 /* Game page specific styles */
 .maingamestyle {
-  /* border: solid 2px red; */
   height: 80vh;
   width: 100%;
 }
 
 #timescore {
-  /* border: solid green 2px; */
   padding-top: 10px;
   width: 60%;
   margin: auto;
@@ -75,7 +86,6 @@ img {
 }
 
 #gamearea {
-  /* border: solid black 2px; */
   text-align: center;
   flex-direction: column;
   height: 85%;
@@ -83,7 +93,6 @@ img {
 }
 
 #objmoving {
-  /* border: solid orange 2px; */
   padding-top: 40px;
 }
 
@@ -95,4 +104,15 @@ img {
   height: 50px;
   font-size: 20px;
   text-align: center;
+}
+
+.bodybg {
+  background-image:url(../pics/bg.png);
+  background-size: cover;
+}
+
+/* instructions specific styles */
+.instructionsstyle {
+  text-align: center;
+  height: 100vh;
 }
