@@ -1,4 +1,9 @@
 /* Target selector */
+
+/* * {
+  border: 0.5px solid black;
+} */
+
 body {
   background-color: lightgrey;
 }
@@ -24,11 +29,6 @@ footer {
   padding-bottom: 10px;
 }
 
-img {
-  width: 120px;
-  height: 60px;
-}
-
 button {
   width: 300px;
   height: 50px;
@@ -51,12 +51,6 @@ button {
 
 /* Class selectors */
 
-/* .bodybg {
-  background-image: url("pics/bg.jpg");
-  background-size: cover;
-
-} */
-
 .maincontainer {
   display: flex;
   align-items: center;
@@ -73,7 +67,7 @@ button {
 
 /* Game page specific styles */
 .maingamestyle {
-  height: 80vh;
+  height: 85vh;
   width: 100%;
 }
 
@@ -109,6 +103,32 @@ button {
 .bodybg {
   background-image:url(../pics/bg.png);
   background-size: cover;
+}
+
+#sonic {
+  width: 100px;
+  height: 70px;
+  opacity: 0.9;
+  margin-top: 25px;
+}
+
+#finishline {
+  height: 120px;
+  width: 100px;
+}
+
+#return {
+  width: 40px;
+  height: 40px;
+}
+
+#trial {
+  display: flex;
+  justify-content: space-between;
+}
+
+.return {
+  margin-top: 170px;
 }
 
 /* instructions specific styles */

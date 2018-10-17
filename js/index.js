@@ -63,13 +63,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var currentScore = document.getElementById('score').innerHTML = 0;
   var time = 0;
 
-  // compareWords();
-  // compareWords (event);
-
-  //Functions
   //Generates random word
   var index;
-
   function generateWord(randomWord) {
     //randomly generates an index
     index = Math.floor(Math.random() * randomWord.length);
@@ -93,20 +88,20 @@ document.addEventListener('DOMContentLoaded', function(event) {
         document.getElementById('outcome').style.color = "Green";
         generateWord(randomWord);
         document.getElementById('userinput').value = "";
-        document.getElementById('userinput').placeholder = "Type the word!"
+        document.getElementById('userinput').placeholder = "Keep typing"
         document.getElementById('score').innerHTML = currentScore += 1;
+        document.getElementById('sonic').style.transform += "translate(150px)";
       } else { //displays incorrect if words don't match
         document.getElementById('outcome').innerHTML = "Incorrect!";
         document.getElementById('outcome').style.color = "Red";
         document.getElementById('userinput').placeholder = "oops! Try again!"
         document.getElementById('userinput').value = "";
+        document.getElementById('userinput').disabled = true;
       }
     }
   })
 
-  // var date = new Date();
-  // var sec = date.getSeconds();
-  // var min = date.getMinutes();
+
   var sec = 0;
   var min = 0;
   var timer = function() {
@@ -121,3 +116,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 });
+
+// confirm("Oops try again"); to finish the game and show time and score
+//document.getElementById('userinput').disabled = true; disables input box when game is finished
+
+//stops the execution of the timer
+//myVar = setInterval(function, milliseconds);
+// clearInterval(myVar);
