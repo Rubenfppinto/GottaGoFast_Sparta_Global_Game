@@ -81,6 +81,20 @@ document.addEventListener('DOMContentLoaded', function(event) {
     //runs the event keycod so it can fetch any code for any key on the keyboard
     var key = event.keyCode;
     var wordInput = document.getElementById('userinput').value;
+    // var sec = 0;
+    // var min = 0;
+    //   if (wordInput != "" &&){
+    //     var timer = function() {
+    //       if (++sec === 60) {
+    //         sec = 0;
+    //         if (++min === 60) min = 0;
+    //       }
+    //       document.getElementById("timer").innerHTML = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
+    //     };
+    //     setInterval(timer, 1000); //runs the clock every second
+    //   }
+    //timer();
+
     //matching if the key pressed is enter
     if (key === 13) {
       if (wordInput.length === randomWord[index].length && wordInput === randomWord[index]) { //displays correct if words match
@@ -90,29 +104,31 @@ document.addEventListener('DOMContentLoaded', function(event) {
         document.getElementById('userinput').value = "";
         document.getElementById('userinput').placeholder = "Keep typing"
         document.getElementById('score').innerHTML = currentScore += 1;
-        document.getElementById('sonic').style.transform += "translate(150px)";
+        document.getElementById('sonic').style.transform += "translate(200px)";
       } else { //displays incorrect if words don't match
         document.getElementById('outcome').innerHTML = "Incorrect!";
         document.getElementById('outcome').style.color = "Red";
         document.getElementById('userinput').placeholder = "oops! Try again!"
         document.getElementById('userinput').value = "";
-        document.getElementById('userinput').disabled = true;
+        // document.getElementById('userinput').disabled = true;
       }
     }
   })
 
 
-  var sec = 0;
-  var min = 0;
-  var timer = function() {
-    if (++sec === 60) {
-      sec = 0;
-      if (++min === 60) min = 0;
-    }
-    document.getElementById("timer").innerHTML = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
-  };
-  setInterval(timer, 1000); //runs the clock every second
-  timer();
+
+showInstructions()
+  // var sec = 0;
+  // var min = 0;
+  // var timer = function() {
+  //   if (++sec === 60) {
+  //     sec = 0;
+  //     if (++min === 60) min = 0;
+  //   }
+  //   document.getElementById("timer").innerHTML = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
+  // };
+  // setInterval(timer, 1000); //runs the clock every second
+  // timer();
 
 
 });

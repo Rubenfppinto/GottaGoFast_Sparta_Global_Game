@@ -13,7 +13,7 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/master.css">
-  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 
   <title>Quickers</title>
 </head>
@@ -26,16 +26,22 @@
     <h1>Quickers</h1>
   </header>
   <div class="container maincontainer">
-    <div class="menu">
+    <div class="col-md-5" >
+      <p id="instructions"></p>
+    </div>
+    <div class="col-md-2 menu" >
       <div class="row">
         <a href="game.html"><button type="button" class="button">Play</button></a>
       </div>
       <div class="row">
-        <a href="leaderboard.html"><button type="button" class="button">Leaderboard</button></a>
+        <button type="button" id="buttonlead" class="button">Leaderboard</button>
       </div>
       <div class="row">
-        <a href="instructions.html"><button type="button" class="button">Instructions</button></a>
+          <button type="button" id="buttoninst" class="button">Instructions</button>
       </div>
+    </div>
+    <div class="col-md-5" >
+      <p id="leaderboard"></p>
     </div>
   </div>
   <footer>
