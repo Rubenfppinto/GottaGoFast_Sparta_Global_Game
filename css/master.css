@@ -142,7 +142,7 @@ button {
 .maincontainer {
   display: flex;
   align-items: center;
-  height: 75vh;
+  height: 85vh;
   text-align: center;
 }
 
@@ -186,23 +186,26 @@ button {
   white-space: nowrap;
   font-family: consolas;
   border-right: 2px solid black;
-  width: 25ch;
+  width: 19ch;
   text-align: center;
-  margin-left: 500px;
+  margin-left: 400px;
+  font-weight: bold;
+  font-family: sonic;
 }
 
 #animationTypingGame {
-  animation: type 1.5s steps(14);
+  animation: type2 1.5s steps(14);
   overflow: hidden;
   white-space: nowrap;
-  font-family: consolas;
+  font-weight: bold;
+  font-family: sonic;
   border-right: 2px solid black;
-  width: 14ch;
+  width: 10ch;
   text-align: center;
-  margin-left: 600px;
+  margin-left: 550px;
 }
 
-@keyframes type {
+@keyframes type2 {
   0% {
     width: 0ch;
   }
@@ -210,6 +213,24 @@ button {
     width: 14ch;
   }
 }
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 24ch;
+  }
+}
+
+@font-face {
+  font-family: 'Sonic';
+  src:
+  url('fonts/sonic.woff2') format('woff2'),
+  url('fonts/sonic.woff') format('woff'),
+  url('fonts/sonic.ttf') format('truetype');
+}
+/* #r
 /* #restart:hover {
   cursor: pointer;
 } */
