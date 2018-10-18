@@ -1,6 +1,10 @@
 # Gotta Go Fast - typing game
 
+##To play the game:
+
 ##To download the game:
+
+
 
 ##Instructions to play:
 Hello player, the objective of this game is to help sonic cross the finish line before the time runs out.
