@@ -44,36 +44,10 @@ button {
   margin-top: 10px;
 }
 
-.button:hover {
-  background-color: #555555;
-  color: white;
-}
 
 /* ID Selectors */
 #aligntext {
   text-align: left;
-}
-
-/* Class selectors */
-
-.maincontainer {
-  display: flex;
-  align-items: center;
-  height: 75vh;
-  text-align: center;
-}
-
-.menu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Game page specific styles */
-.maingamestyle {
-  height: 85vh;
-  width: 100%;
 }
 
 #timescore {
@@ -115,11 +89,6 @@ button {
   font-weight: bold;
 }
 
-.bodybg {
-  background-image:url(../pics/bg.png);
-  background-size: cover;
-}
-
 #hedgehog {
   background-image:url(../pics/gamebg2.png);
   background-size: cover;
@@ -148,14 +117,6 @@ button {
   justify-content: space-between;
 }
 
-.return {
-  margin-top: 80px;
-}
-
-.afterGameMessage {
-  font-weight: bold;
-}
-
 #centralised {
   padding-top: 125px;
   font-weight: bold;
@@ -171,6 +132,84 @@ button {
   font-weight: bold;
 }
 
+/* Class selectors */
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.maincontainer {
+  display: flex;
+  align-items: center;
+  height: 75vh;
+  text-align: center;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.maingamestyle {
+  height: 85vh;
+  width: 100%;
+}
+
+.bodybg {
+  background-image:url(../pics/bg.png);
+  background-size: cover;
+}
+
+.return {
+  margin-top: 80px;
+}
+
+.afterGameMessage {
+  font-weight: bold;
+}
+
+.textformating {
+  text-align: left;
+  color: darkblue;
+  background-color: lightgrey;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+#animationTyping {
+  animation: type 1.5s steps(24);
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: consolas;
+  border-right: 2px solid black;
+  width: 25ch;
+  text-align: center;
+  margin-left: 500px;
+}
+
+#animationTypingGame {
+  animation: type 1.5s steps(14);
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: consolas;
+  border-right: 2px solid black;
+  width: 14ch;
+  text-align: center;
+  margin-left: 600px;
+}
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 14ch;
+  }
+}
 /* #restart:hover {
   cursor: pointer;
 } */

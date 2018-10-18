@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
         document.getElementById('score').style.color = "rgb(10,225,10)";
         document.getElementById('sonic').style.transform += "translate(50px)";
         sec = sec + 1;
-        if (correctScore == 1 ) {
+        if (correctScore == 1) {
           document.getElementById('gamearea').innerHTML = "";
           document.getElementById('timescore').innerHTML = "";
           document.getElementById('objmoving').innerHTML = "";
@@ -132,17 +132,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   })
 
-
-//fdsfs
-
-
   // event listener that starts the timer when releasing ctrl key
   document.addEventListener("keyup", function(event) {
     var disabledBox = document.getElementById('userinput');
     var startTimer = event.keyCode;
     if (startTimer === 17) {
       setInterval(timer, 1000); //runs the clock every second
-      timer();
+        timer();
     }
   })
 
