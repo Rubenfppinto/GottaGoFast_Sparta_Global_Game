@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "culture",
     "integrated",
     "falsify",
-    "racism",
+    "intention",
     "discover",
     "photograph",
     "credibility",
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "chain",
     "brainstorm",
     "refer",
-    "feminist",
+    "concession",
     "quantity",
     "brush",
     "nominate",
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "glove",
     "crime",
     "bad",
-    "crack",
+    "rehabilitation",
     "descent",
     "far",
     "nationalist",
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "clinic",
     "kinship"
   ]
-
+  var winningScore = 10;
   var correctScore = parseInt(document.getElementById('score').innerHTML = "0")
   var incorrectScore = parseInt(document.getElementById('scoreincorrect').innerHTML = "0");
   var time = 0;
@@ -76,15 +76,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   generateWord(randomWord);
 
-  var sec = 3;
+  var sec = 16;
   timer = function() {
-    if (--sec == 0) {
-      // console.log("ya  y")
+    if (--sec == 0  && !(correctScore==winningScore)) {
       document.getElementById('gamearea').innerHTML = "";
       document.getElementById('timescore').innerHTML = "";
       document.getElementById('objmoving').innerHTML = "";
       document.getElementById('timescore').insertAdjacentHTML('afterbegin', '<h2 id="lostId">You lost this time!</h2>');
-      document.getElementById('gamearea').insertAdjacentHTML('afterbegin', `<h2 id="centralised">Unfortunately you ran out of time</h2><h2 class="afterGameMessage">You typed ${correctScore} <span id="correct">correctly</span> and ${incorrectScore} <span id="incorrect">incorrectly</span></h2>
+      document.getElementById('gamearea').insertAdjacentHTML('afterbegin', `<h2 id="centralised">Unfortunately you ran out of time</h2><h2 class="afterGameMessage">You typed ${correctScore} words <span id="correct">correctly</span> and ${incorrectScore} <span id="incorrect">incorrectly</span></h2>
       <h3 class="afterGameMessage">You were unable to get Sonic to cross the finish line within the time limit</h3>
       <button onclick="location.href='game.html'">Play again</button>`);
     }
@@ -106,9 +105,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
         document.getElementById('userinput').placeholder = "Keep typing"
         document.getElementById('score').innerHTML = correctScore += 1;
         document.getElementById('score').style.color = "rgb(10,225,10)";
-        document.getElementById('sonic').style.transform += "translate(50px)";
-        sec = sec + 1;
-        if (correctScore == 1) {
+        document.getElementById('sonic').style.transform += "translate(100px)";
+        sec = sec +1; //increases one second per correct word
+        if (correctScore == winningScore) {
           document.getElementById('gamearea').innerHTML = "";
           document.getElementById('timescore').innerHTML = "";
           document.getElementById('objmoving').innerHTML = "";
@@ -116,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
           document.getElementById('timescore').innerHTML = "";
           document.getElementById('objmoving').innerHTML = "";
           document.getElementById('timescore').insertAdjacentHTML('afterbegin', '<h2 id="lostId">You have won!</h2>');
-          document.getElementById('gamearea').insertAdjacentHTML('afterbegin', `<h2 id="centralisedWin">Great job!</h2><img src="pics/fireworks.gif" height="250" width="450"><h2 class="afterGameMessage">You typed ${correctScore} <span id="correct">correctly</span> and ${incorrectScore} <span id="incorrect">incorrectly</span></h2>
+          document.getElementById('gamearea').insertAdjacentHTML('afterbegin', `<h2 id="centralisedWin">Great job!</h2><img src="pics/fireworks.gif" height="250" width="450"><h2 class="afterGameMessage">You typed ${correctScore} words <span id="correct">correctly</span> and ${incorrectScore} <span id="incorrect">incorrectly</span></h2>
           <h3 class="afterGameMessage">Sonic to crossed the finish line within the time limit</h3>
           <button onclick="location.href='game.html'">Play again</button>`);
         }
@@ -138,29 +137,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var startTimer = event.keyCode;
     if (startTimer === 17) {
       setInterval(timer, 1000); //runs the clock every second
-        timer();
+      timer();
     }
   })
-
-  //restart timer
-  document.getElementById('restart').addEventListener("click", function() {
-    if (sec == "0") {
-      document.getElementById('restart').style.cursor = "pointer";
-      sec = 6;
-    }
-  })
-
-
-
 
 });
 
-// confirm("Oops try again"); to finish the game and show time and score
-
-// document.getElementById('userinput').disabled = true;
-//stops the execution of the timer
-// myVar = setInterval(function, milliseconds);
-// clearInterval(myVar);
 
 //TIMER
 // var sec = 0;

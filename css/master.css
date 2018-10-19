@@ -12,10 +12,6 @@ h4 {
   font-weight: bold;
 }
 
-#timescore {
-  text-align: center;
-}
-
 header {
   border-bottom: 1.5px solid black;
   text-align: center;
@@ -51,21 +47,22 @@ button {
 }
 
 #timescore {
+
+}
+
+#timescore {
   padding-top: 10px;
   width: 60%;
   margin: auto;
   max-width: 60%;
   border-bottom: black solid 1px;
+  text-align: center;
 }
 
 #gamearea {
   text-align: center;
   flex-direction: column;
   height: 85%;
-
-}
-
-#objmoving {
 
 }
 
@@ -184,13 +181,13 @@ button {
   animation: type 1.5s steps(24);
   overflow: hidden;
   white-space: nowrap;
-  font-family: consolas;
   border-right: 2px solid black;
   width: 19ch;
   text-align: center;
   margin-left: 400px;
   font-weight: bold;
   font-family: sonic;
+  left: 400px;
 }
 
 #animationTypingGame {
@@ -230,7 +227,3 @@ button {
   url('fonts/sonic.woff') format('woff'),
   url('fonts/sonic.ttf') format('truetype');
 }
-/* #r
-/* #restart:hover {
-  cursor: pointer;
-} */
