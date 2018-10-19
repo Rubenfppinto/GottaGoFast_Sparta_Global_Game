@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "clinic",
     "kinship"
   ]
-  var winningScore = 10;
+  var winningScore = 15;
   var correctScore = parseInt(document.getElementById('score').innerHTML = "0")
   var incorrectScore = parseInt(document.getElementById('scoreincorrect').innerHTML = "0");
   var time = 0;
