@@ -1,6 +1,7 @@
 # Gotta Go Fast - typing game
 
 ##To play the game:
+https://gottagofast.netlify.com/
 
 ##To download the game:
 
@@ -13,3 +14,4 @@ IMPORTANT: The clock does not start autommatically, which allows you to practice
 
 ##Technologies used:
 HTML was used in this project to structure the layout of the game, CSS and Bootstrap 3.3.7 was used to add styling to the game and Javascript was used to add interactions to the game.
+
