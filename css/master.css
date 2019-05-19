@@ -47,10 +47,6 @@ button {
 }
 
 #timescore {
-
-}
-
-#timescore {
   padding-top: 10px;
   width: 60%;
   margin: auto;
@@ -156,7 +152,7 @@ button {
 }
 
 .bodybg {
-  background-image:url(../pics/bg.png);
+  background-image:url(../pics/bg.jpg);
   background-size: cover;
 }
 
@@ -184,10 +180,11 @@ button {
   border-right: 2px solid black;
   width: 19ch;
   text-align: center;
-  margin-left: 400px;
+  margin-left: 300px;
   font-weight: bold;
   font-family: sonic;
   left: 400px;
+  color: black;
 }
 
 #animationTypingGame {
